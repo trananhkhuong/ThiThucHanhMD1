@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numBers = parseInt(prompt(" Enter the number: "));
+    let intNumBer = new Array(numBers);
+    for(let i=0; i< intNumBer.length; i++){
+        intNumBer[i] = Math.round(Math.random()*5+1);
+    }
+    document.write("Element in array: " + intNumBer + "<br>");
+    function findElementIndexArray(element,arr){
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if(element === arr[i] ){
+                check = true;
+                return document.write("Locations "+element+" \n" + "in the array is: " +i) ;
+            }
+
+        }
+        if(!check){
+            alert("Element: " +element +" \n" + "not in array ");
+        }
+    }
+    findElementIndexArray(3,intNumBer);
+
+    let number = +prompt("Enter the number to check: ");
+    function checkNumberInArray (number,arr){
+        let check = false;
+        for (let i = 0; i < arr.length; i++) {
+            if(number === arr[i] ){
+                check = true;
+                return document.write("The element just entered " +number + " \n" + "of array ") ;
+            }
+        }
+        if(!check){
+            document.write("The element just entered " +number + " no In array ")
+        }
+    }
+    checkNumberInArray (number,intNumBer);
+</script>
+</body>
+</html>

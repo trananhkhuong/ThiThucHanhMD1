@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<script>
+  class Animal {
+
+      name;
+      weight;
+
+      constructor(name, weight) {
+
+          this.name = name;
+          this.weight = weight;
+      }
+
+          getName() {
+              return this.name;
+          }
+
+          setName(name) {
+              this.name = name;
+          }
+
+          getWeight() {
+              return this.weight;
+          }
+
+          setWeight(weight){
+            this.weight = weight;
+          }
+  }
+
+  let objAnimal1 = new Animal("Elephant", 45.6 );
+  let objAnimal2 = new Animal("Cat", 15);
+
+  document.write( "Name and weight of objAnimal1: " + objAnimal1.getName()  + " and "+ objAnimal1.getWeight() + " ");
+  document.write( "</br>" + "Name and weight of objAnimal2: " + objAnimal2.getName()  + " and "+ objAnimal2.getWeight() + " ");
+  objAnimal2.setName("Mouse");
+  document.write( "</br>" + "Name of objAnimal2: " + " " + objAnimal2.getName());
+  objAnimal2.setWeight(10);
+  document.write( "</br>" + "Name of objAnimal2: " + " " + objAnimal2.getWeight());
+
+
+</script>
+</body>
+</html>
